@@ -33,7 +33,6 @@ alias ls='colorls -A --sd'
 alias cp='/usr/local/bin/cp -gR'
 alias mv='/usr/local/bin/mv -g'
 alias tmpmail='/usr/local/bin/tmpmail'
-export PATH="/Users/jsmith/anaconda3/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export NVM_DIR="$HOME/.nvm"
