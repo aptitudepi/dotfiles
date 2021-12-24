@@ -29,11 +29,6 @@ fi
 source $(dirname $(gem which colorls))/tab_complete.sh
 eval "$(zoxide init zsh)"
 
-PATH="/home/db/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/home/db/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/home/db/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/home/db/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/db/perl5"; export PERL_MM_OPT;
 alias ls='colorls -A --sd'
 alias cp='/usr/local/bin/cp -gR'
 alias mv='/usr/local/bin/mv -g'
