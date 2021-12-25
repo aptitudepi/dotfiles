@@ -30,10 +30,10 @@ echo alias cp='/usr/local/bin/cp -g' >> ~/.zshrc
 echo alias mv='/usr/local/bin/mv -g' >> ~/.zshrc
 wget https://raw.githubusercontent.com/sdushantha/tmpmail/master/tmpmail
 chmod -v +x tmpmail
-sudo ln -s tmpmail /usr/bin/tmpmail
+sudo mv tmpmail /usr/bin/tmpmail
 curl ix.io/client > ix
 chmod +x ix
-sudo ln -s ix /usr/bin/ix
+sudo mv ix /usr/bin
 echo "export PATH=$PATH:~/.local/bin" >> .bashrc
 echo "export PATH=$PATH:/usr/bin" >> .bashrc
 echo "export PATH=$PATH:~/.local/bin" >> .zshrc
