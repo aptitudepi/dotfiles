@@ -79,6 +79,7 @@ export BASH_IT_THEME="powerline-plain"
 source /var/lib/gems/2.7.0/gems/colorls-1.4.4/lib/tab_complete.sh
 alias lc='colorls -lA --sd'
 alias cp='/usr/local/bin/cp -g'
+<<<<<<< Updated upstream
 alias mv='/usr/local/bin/mv -g'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
@@ -93,3 +94,6 @@ alias cp=/usr/local/bin/cp -g
 alias mv=/usr/local/bin/mv -g
 eval "$(zoxide init zsh)"
 export PATH="/home/db/.local/bin:$PATH"
+=======
+alias mv='/usr/local/bin/mv'
+>>>>>>> Stashed changes
