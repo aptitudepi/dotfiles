@@ -7,6 +7,7 @@ yadm decrypt
 yadm submodule update --remote --merge
 bash ~/.bash_it/install.sh
 echo "export BASH_IT_THEME=\"powerline-plain\"" >> ~/.bashrc
+echo "export BASH_IT_THEME=\"powerline-plain\"" >> ~/.zshrc
 yadm config --global status.submoduleSummary true
 curl -sS https://webinstall.dev/zoxide | bash
 echo "source $(dirname $(gem which colorls))/tab_complete.sh" >> ~/.bashrc
@@ -23,6 +24,10 @@ patch -p1 -i advcpmv-0.9-9.0.patch
 make
 sudo mv ./src/cp /usr/local/bin/cp
 sudo mv ./src/mv /usr/local/bin/mv
+echo alias cp='/usr/local/bin/cp -g' >> ~/.bashrc
+echo alias mv='/usr/local/bin/mv -g' >> ~/.bashrc
+echo alias cp='/usr/local/bin/cp -g' >> ~/.zshrc
+echo alias mv='/usr/local/bin/mv -g' >> ~/.zshrc
 wget https://raw.githubusercontent.com/sdushantha/tmpmail/master/tmpmail
 chmod -v +x tmpmail
 sudo mv tmpmail /usr/bin/tmpmail
