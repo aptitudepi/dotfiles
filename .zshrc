@@ -38,16 +38,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 export PATH=$PATH:~/.local/bin
 
-export BASH_IT_THEME="powerline-plain"
-
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
 source /var/lib/gems/2.7.0/gems/colorls-1.4.4/lib/tab_complete.sh
 export PATH=$PATH:/usr/bin
 
-export BASH_IT_THEME="powerline-plain"
-source /var/lib/gems/2.7.0/gems/colorls-1.4.4/lib/tab_complete.sh
-alias ls='colorls -lA --sd'
-alias cp=/usr/local/bin/cp -g
-alias mv=/usr/local/bin/mv -g
