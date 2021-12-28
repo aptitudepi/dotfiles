@@ -28,7 +28,7 @@ fi
 source $(dirname $(gem which colorls))/tab_complete.sh
 eval "$(zoxide init zsh)"
 
-alias ls='colorls -A --sd'
+alias ls='colorls'
 alias cp='/usr/local/bin/cp -gR'
 alias mv='/usr/local/bin/mv -g'
 alias tmpmail='/usr/local/bin/tmpmail'
