@@ -77,7 +77,7 @@ export SCM_CHECK=true
 source "$BASH_IT"/bash_it.sh
 export BASH_IT_THEME="powerline-plain"
 source /var/lib/gems/2.7.0/gems/colorls-1.4.4/lib/tab_complete.sh
-alias lc='colorls -lA --sd'
+alias ls='colorls'
 alias cp='/usr/local/bin/cp -g'
 alias mv='/usr/local/bin/mv -g'
 
@@ -87,7 +87,3 @@ export BASH_IT_THEME="powerline-plain"
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
-source /var/lib/gems/2.7.0/gems/colorls-1.4.4/lib/tab_complete.sh
-alias lc='colorls -lA --sd'
-alias cp=/usr/local/bin/cp -g
-alias mv=/usr/local/bin/mv -g
