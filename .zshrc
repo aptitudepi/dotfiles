@@ -26,6 +26,7 @@ fi
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source $(dirname $(gem which colorls))/tab_complete.sh
+export PATH="/home/db/.local/bin:$PATH"
 eval "$(zoxide init zsh)"
 
 alias ls='colorls -A --sd'
