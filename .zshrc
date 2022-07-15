@@ -44,4 +44,3 @@ export PATH=$PATH:~/.local/bin
 
 source /var/lib/gems/2.7.0/gems/colorls-1.4.4/lib/tab_complete.sh
 export PATH=$PATH:/usr/bin
-
