@@ -42,5 +42,4 @@ export PATH=$PATH:~/.local/bin
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
-source /var/lib/gems/2.7.0/gems/colorls-1.4.4/lib/tab_complete.sh
 export PATH=$PATH:/usr/bin
