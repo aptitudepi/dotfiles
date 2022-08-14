@@ -43,3 +43,20 @@ export PATH=$PATH:~/.local/bin
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
 export PATH=$PATH:/usr/bin
+export BASH_IT_THEME="powerline-plain"
+source /var/lib/gems/3.0.0/gems/colorls-1.4.6/lib/tab_complete.sh
+alias ls='colorls'
+alias cp=/usr/local/bin/cp -g
+alias mv=/usr/local/bin/mv -g
+function cpstat()
+{
+  local pid="${1:-$(pgrep -xn cp)}" src dst
+  [[ "$pid" ]] || return
+  while [[ -f "/proc/$pid/fd/3" ]]; do
+    read src dst < <(stat -L --printf '%s ' "/proc/$pid/fd/"{3,4})
+    (( src )) || break
+    printf 'cp %d%%\r' $((dst*100/src))
+    sleep 1
+  done
+  echo
+}
