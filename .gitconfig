@@ -1,0 +1,17 @@
+# This is Git's per-user configuration file.
+[user]
+	email = 45304559+aptitudepi@users.noreply.github.com
+	name = aptitudepi
+# Please adapt and uncomment the following lines:
+#	name = Banerjee
+#	email = 100041206@csisd.org
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+	grep = auto
+[core]
+	editor = code --wait
+[alias]
+	acp = "!f() { git add -A && git commit -m $@ && git push; }; f"
