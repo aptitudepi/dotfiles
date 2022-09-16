@@ -34,4 +34,6 @@ sudo mv tmpmail /usr/bin/tmpmail
 curl ix.io/client > ix
 chmod +x ix
 sudo mv ix /usr/bin
+sudo apt install git -y
+git config --global alias.acp '!f() { git add -A && git commit -m "$@" && git push; }; f'
 
