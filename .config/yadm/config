@@ -4,3 +4,5 @@
 	email = 45304559+aptitudepi@users.noreply.github.com
 [credential]
 	helper = store
+[alias]
+        acp = "!f() { git add -A && git commit -m \"$@\" && git push; }; f"
