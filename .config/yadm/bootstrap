@@ -1,8 +1,8 @@
-sudo apt install git build-essential "*zsh*" yadm ruby ruby-dev gconf2 jq curl w3m
+sudo apt install git build-essential "*zsh*" yadm ruby ruby-dev gconf2 jq curl w3m -y
 sudo gem install colorls
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 bash ~/.fzf/install
-yadm clone --depth=5 https://github.com/aptitudepi/dotfiles.git
+yadm submodule update --recursive --init
 yadm decrypt
 yadm submodule update --remote --merge
 bash ~/.bash_it/install.sh
@@ -34,6 +34,4 @@ sudo mv tmpmail /usr/bin/tmpmail
 curl ix.io/client > ix
 chmod +x ix
 sudo mv ix /usr/bin
-sudo apt install git -y
 git config --global alias.acp '!f() { git add -A && git commit -m "$@" && git push; }; f'
-
