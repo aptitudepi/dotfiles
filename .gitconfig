@@ -1,0 +1,12 @@
+[user]
+	name = Devkumar Banerjee
+	email = 45304559+aptitudepi@users.noreply.github.com
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[credential]
+	helper = cache
+[alias]
+	acp = "!f() { git add -A && git commit -m \"$@\" && git push; }; f"
