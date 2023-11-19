@@ -1,4 +1,8 @@
-sudo apt install git build-essential "*zsh*" yadm ruby ruby-dev gconf2 jq curl w3m -y
+sudo apt install -y git build-essential "*zsh*" yadm ruby ruby-dev gconf2 jq curl w3m wget gnupg2 gnupg-agent dirmngr cryptsetup scdaemon pcscd secure-delete hopenpgp-tools yubikey-personalization libssl-dev swig libpcsclite-dev python3-pip python3-pyscard
+pip3 install PyOpenSSL
+pip3 install yubikey-manager
+sudo service pcscd start
+~/.local/bin/ykman openpgp info
 sudo gem install colorls
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 bash ~/.fzf/install
