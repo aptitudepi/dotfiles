@@ -1,6 +1,7 @@
 [user]
 	email = 45304559+aptitudepi@users.noreply.github.com
 	name = aptitudepi
+	username = aptitudepi
 [credential "https://github.com"]
 	helper = !/usr/bin/gh auth git-credential
 [credential "https://gist.github.com"]
@@ -14,3 +15,5 @@
 [credential]
 	helper = /usr/local/share/gcm-core/git-credential-manager
 	credentialStore = cache
+[alias]
+	change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$`echo $VAR`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f"
