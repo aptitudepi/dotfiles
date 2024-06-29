@@ -44,7 +44,6 @@ export PATH=$PATH:~/.local/bin
 
 export PATH=$PATH:/usr/bin
 export BASH_IT_THEME="powerline-plain"
-source /var/lib/gems/3.0.0/gems/colorls-1.4.6/lib/tab_complete.sh
 alias ls='colorls'
 alias cp=/usr/local/bin/cp -g
 alias mv=/usr/local/bin/mv -g
@@ -60,3 +59,10 @@ function cpstat()
   done
   echo
 }
+unset SSH_AGENT_PID
+if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
+  export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+fi
+export GPG_TTY=$(tty)
+gpg-connect-agent updatestartuptty /bye >/dev/null
+COWPATH="$COWPATH:$HOME/.cowsay/cowfiles"
