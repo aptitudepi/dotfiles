@@ -5,4 +5,4 @@
 [credential]
 	helper = store
 [alias]
-        acp = "!f() { git add -A && git commit -m \"$@\" && git push; }; f"
+        acp = "!f() { yadm add -A && yadm commit -m \"$@\" && yadm push; }; f"
