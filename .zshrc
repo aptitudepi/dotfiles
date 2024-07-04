@@ -66,3 +66,5 @@ fi
 export GPG_TTY=$(tty)
 gpg-connect-agent updatestartuptty /bye >/dev/null
 COWPATH="$COWPATH:$HOME/.cowsay/cowfiles"
+export PATH=/usr/bin:$PATH
+export DOCKER_HOST=unix:///mnt/wslg/runtime-dir/docker.sock
