@@ -1,0 +1,41 @@
+sudo apt install -y git build-essential "*zsh*" yadm ruby ruby-dev gconf2 jq curl w3m wget gnupg2 gnupg-agent dirmngr cryptsetup scdaemon pcscd secure-delete hopenpgp-tools yubikey-personalization libssl-dev swig libpcsclite-dev python3-pip python3-pyscard
+pip3 install PyOpenSSL
+pip3 install yubikey-manager
+sudo service pcscd start
+~/.local/bin/ykman openpgp info
+sudo gem install colorls
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+bash ~/.fzf/install
+yadm submodule update --recursive --init
+yadm decrypt
+yadm submodule update --remote --merge
+bash ~/.bash_it/install.sh
+echo "export BASH_IT_THEME=\"powerline-plain\"" >> ~/.bashrc
+echo "export BASH_IT_THEME=\"powerline-plain\"" >> ~/.zshrc
+yadm config --global status.submoduleSummary true
+curl -sS https://webinstall.dev/zoxide | bash
+echo "source $(dirname $(gem which colorls))/tab_complete.sh" >> ~/.bashrc
+echo "source $(dirname $(gem which colorls))/tab_complete.sh" >> ~/.zshrc
+echo "alias ls='colorls'" >> ~/.zshrc
+echo "alias ls='colorls'" >> ~/.bashrc
+chsh -s $(which zsh)
+wget http://ftp.gnu.org/gnu/coreutils/coreutils-9.0.tar.xz
+tar xvJf coreutils-9.0.tar.xz
+cd coreutils-9.0/
+wget https://raw.githubusercontent.com/jarun/advcpmv/master/advcpmv-0.9-9.0.patch
+patch -p1 -i advcpmv-0.9-9.0.patch
+./configure
+make
+sudo mv ./src/cp /usr/local/bin/cp
+sudo mv ./src/mv /usr/local/bin/mv
+echo alias cp='/usr/local/bin/cp -g' >> ~/.bashrc
+echo alias mv='/usr/local/bin/mv -g' >> ~/.bashrc
+echo alias cp='/usr/local/bin/cp -g' >> ~/.zshrc
+echo alias mv='/usr/local/bin/mv -g' >> ~/.zshrc
+wget https://raw.githubusercontent.com/sdushantha/tmpmail/master/tmpmail
+chmod -v +x tmpmail
+sudo mv tmpmail /usr/bin/tmpmail
+curl ix.io/client > ix
+chmod +x ix
+sudo mv ix /usr/bin
+git config --global alias.acp '!f() { git add -A && git commit -m "$@" && git push; }; f'

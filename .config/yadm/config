@@ -1,0 +1,8 @@
+[pull]
+	rebase = true
+[user]
+	email = 45304559+aptitudepi@users.noreply.github.com
+[credential]
+	helper = store
+[alias]
+        acp = "!f() { yadm add -A && yadm commit -m \"$@\" && yadm push; }; f"
