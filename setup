@@ -1,4 +1,4 @@
-sudo apt update && sudo apt upgrade -y
+sudo apt update
 sudo apt install yadm -y
 yadm bootstrap
 chsh -s zsh
