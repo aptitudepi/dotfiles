@@ -3,9 +3,9 @@
 	name = aptitudepi
 	username = aptitudepi
 [credential "https://github.com"]
-	helper = !/usr/bin/gh auth git-credential
+	helper = !gh auth git-credential
 [credential "https://gist.github.com"]
-	helper = !/usr/bin/gh auth git-credential
+	helper = !gh auth git-credential
 	signingkey = DFC72721BE0BDDE2
 [filter "lfs"]
 	process = git-lfs filter-process
