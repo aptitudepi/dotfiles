@@ -907,7 +907,7 @@
   # Context color when running with privileges.
   typeset -g POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND=1
   # Context color in SSH without privileges.
-  typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_FOREGROUND=21
+  typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_FOREGROUND=1
   # Default context color (no privileges, no SSH).
   typeset -g POWERLEVEL9K_CONTEXT_FOREGROUND=21
 
@@ -917,6 +917,19 @@
   typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_TEMPLATE='%n@%m'
   # Default context format (no privileges, no SSH): user@hostname.
   typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE='%n@%m'
+
+  if [[ -n "$SSH_CONNECTION" ]]; then
+    # SSH session: blue user @ fuchsia @ red host
+    # typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE='%F{4}%n%F{3}@%F{1}%m'
+    typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO,ROOT}_TEMPLATE='%F{4}%n%F{13}@%F{1}%m'
+  else
+    # Local session: blue user @ host
+    typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE='%n@%m'
+  fi
+
+  # 3. Force the segment to stay visible
+  typeset -g POWERLEVEL9K_ALWAYS_SHOW_CONTEXT=true
+  typeset -g POWERLEVEL9K_CONTEXT_VISUAL_IDENTIFIER_EXPANSION=''
 
   # Don't show context unless running with privileges or in SSH.
   # Tip: Remove the next line to always show context.
